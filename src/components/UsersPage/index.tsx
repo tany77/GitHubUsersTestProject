@@ -24,19 +24,23 @@ const UsersPage: React.FC<any> = () => {
     let ids = arr.map((item) => item.node_id);
     setIsLoadingNodes(true);
 
-    GetNodes(ids).then((result) => {
-      setIsLoadingNodes(false);
-      let usersWithRepoCount = fetchUsersResponse.items.map(
-        (item: GitHubUser) => {
-          let repo = ((result.data as any).nodes as Array<any>).find(
-            (x) => x.id === item.node_id
-          );
-          return { ...item, repo_count: repo.repositories.totalCount };
-        }
-      );
+    GetNodes(ids)
+      .then((result) => {
+        setIsLoadingNodes(false);
+        let usersWithRepoCount = fetchUsersResponse.items.map(
+          (item: GitHubUser) => {
+            let repo = ((result.data as any).nodes as Array<any>).find(
+              (x) => x.id === item.node_id
+            );
+            return { ...item, repo_count: repo.repositories.totalCount };
+          }
+        );
 
-      setUsersWithRepos(usersWithRepoCount);
-    });
+        setUsersWithRepos(usersWithRepoCount);
+      })
+      .catch((e) => {
+        console.error("update your token for GitHub", e);
+      });
   };
 
   useEffect(() => {
