@@ -5,7 +5,7 @@ const GetNodes = (ids: string[]) => {
   const networkInterface = createNetworkInterface(
     "https://api.github.com/graphql"
   );
-  const TOKEN = "0c073e5434ae9eeba3f32b2588465e8ec2e04a50";
+  const TOKEN = "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";
   const idsParam = JSON.stringify(ids);
 
   networkInterface.use([
