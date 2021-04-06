@@ -1,0 +1,25 @@
+.user-block {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightblue;
+  margin: 10px auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 30px;
+  color: #023b6d;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+}
+
+.user-block:hover {
+  background-color: #009bd9;
+  color: #fff;
+}
+
+.user-avatar {
+  align-items: flex-start;
+}

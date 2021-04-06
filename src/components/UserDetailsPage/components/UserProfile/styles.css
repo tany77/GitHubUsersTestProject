@@ -1,0 +1,35 @@
+.profile {
+  margin: 30px auto 50px;
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.img-avatar {
+  text-align: center;
+}
+
+ul.user-data,
+.user-data-label {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 5px 20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+ul.user-data li,
+.user-data-label li {
+  align-items: center;
+  padding: 5px 0;
+  color: #023b6d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-data-label li {
+  text-align: end;
+  font-weight: normal;
+  font-size: 16px;
+}
